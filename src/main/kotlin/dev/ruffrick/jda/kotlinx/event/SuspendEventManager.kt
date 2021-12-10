@@ -6,7 +6,6 @@ import net.dv8tion.jda.api.events.GenericEvent
 import net.dv8tion.jda.api.hooks.IEventManager
 
 class SuspendEventManager : IEventManager {
-
     private var listeners = emptyArray<SuspendEventListener>()
     private val log by Logger
 
@@ -48,5 +47,4 @@ class SuspendEventManager : IEventManager {
     override fun getRegisteredListeners(): MutableList<Any> {
         return listeners.toMutableList()
     }
-
 }

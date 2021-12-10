@@ -9,12 +9,11 @@ object Logger {
 }
 
 object Env {
-
     private val regex0 = Regex("\\W+")
     private val regex1 = Regex("\\s+|\\B(?=[A-Z])")
 
     private fun getEnv(thisRef: Any, property: KProperty<*>): String? {
-        val prefix = thisRef::class.java.name.replace(regex0, " ").split(regex1).joinToString("_")
+        val prefix = thisRef::class.simpleName!!.replace(regex0, " ").split(regex1).joinToString("_")
         val name = property.name.replace(regex0, " ").split(regex1).joinToString("_")
         return System.getenv("${prefix.uppercase()}_${name.uppercase()}")
     }
@@ -48,5 +47,4 @@ object Env {
     object Boolean {
         operator fun getValue(thisRef: Any, property: KProperty<*>) = getEnv(thisRef, property)?.toBoolean()
     }
-
 }

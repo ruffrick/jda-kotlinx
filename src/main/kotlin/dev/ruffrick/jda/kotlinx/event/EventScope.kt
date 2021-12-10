@@ -5,7 +5,5 @@ import kotlinx.coroutines.asCoroutineDispatcher
 import java.util.concurrent.Executors
 
 object EventScope : CoroutineScope {
-
     override val coroutineContext = Executors.newWorkStealingPool().asCoroutineDispatcher()
-
 }
