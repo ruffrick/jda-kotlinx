@@ -2,7 +2,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     // https://plugins.gradle.org/plugin/org.jetbrains.kotlin.jvm
-    kotlin("jvm") version "1.6.10-RC"
+    kotlin("jvm") version "1.6.10"
 
     `maven-publish`
 }
@@ -16,10 +16,10 @@ repositories {
 
 dependencies {
     // https://github.com/DV8FromTheWorld/JDA/
-    compileOnly("net.dv8tion:JDA:5.0.0-alpha.2")
+    compileOnly("net.dv8tion:JDA:5.0.0-alpha.3")
 
     // https://mvnrepository.com/artifact/org.jetbrains.kotlinx/kotlinx-coroutines-core
-    api("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0-RC")
+    api("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0")
 }
 
 tasks.withType<KotlinCompile> {
