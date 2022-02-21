@@ -15,8 +15,8 @@ repositories {
 }
 
 dependencies {
-    // https://github.com/DV8FromTheWorld/JDA/
-    compileOnly("net.dv8tion:JDA:5.0.0-alpha.5")
+    // https://mvnrepository.com/artifact/net.dv8tion/JDA
+    compileOnly("net.dv8tion:JDA:5.0.0-alpha.6")
 
     // https://mvnrepository.com/artifact/org.jetbrains.kotlinx/kotlinx-coroutines-core
     api("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0")
