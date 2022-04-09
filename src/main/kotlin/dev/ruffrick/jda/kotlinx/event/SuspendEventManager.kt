@@ -1,13 +1,13 @@
 package dev.ruffrick.jda.kotlinx.event
 
-import dev.ruffrick.jda.kotlinx.Logger
+import dev.ruffrick.jda.kotlinx.LogFactory
 import kotlinx.coroutines.launch
 import net.dv8tion.jda.api.events.GenericEvent
 import net.dv8tion.jda.api.hooks.IEventManager
 
 class SuspendEventManager : IEventManager {
     private var listeners = emptyArray<SuspendEventListener>()
-    private val log by Logger
+    private val log by LogFactory
 
     override fun register(listener: Any) {
         val listeners = listeners.copyOf(listeners.size + 1)

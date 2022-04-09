@@ -1,3 +1,5 @@
+@file:Suppress("unused")
+
 package dev.ruffrick.jda.kotlinx
 
 import kotlinx.coroutines.CompletableDeferred

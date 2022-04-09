@@ -78,28 +78,6 @@ jda.on<MessageReceivedEvent> {
 }
 ```
 
-## Delegates
-
-There are a couple of utility delegates for logging and environment variables.
-
-```kotlin
-val log by Logger // = LoggerFactory.getLogger(this::class.java)
-```
-
-```kotlin
-object SampleConfig {
-    val shardsTotal by Env.Int // = System.getenv("SAMPLE_CONFIG_SHARDS_TOTAL")?.toInt()
-
-    object Discord {
-        val token by Env // = System.getenv("SAMPLE_CONFIG_DISCORD_TOKEN")
-    }
-}
-// ...
-val shardManager = DefaultShardManagerBuilder.createDefault(SampleConfig.Discord.token)
-    .setShardsTotal(SampleConfig.shardsTotal ?: 1)
-    .build()
-```
-
 ## Download
 
 ### Gradle

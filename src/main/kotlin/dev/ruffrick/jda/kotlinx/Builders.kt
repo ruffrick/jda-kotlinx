@@ -8,8 +8,8 @@ import net.dv8tion.jda.api.sharding.DefaultShardManagerBuilder
 
 fun JDABuilder.useSuspendEventManager() = setEventManager(SuspendEventManager())
 
-fun JDABuilder.buildSuspend() = setEventManager(SuspendEventManager()).build()
+fun JDABuilder.buildSuspend() = useSuspendEventManager().build()
 
 fun DefaultShardManagerBuilder.useSuspendEventManager() = setEventManagerProvider { SuspendEventManager() }
 
-fun DefaultShardManagerBuilder.buildSuspend() = setEventManagerProvider { SuspendEventManager() }.build()
+fun DefaultShardManagerBuilder.buildSuspend() = useSuspendEventManager().build()
